@@ -1,0 +1,47 @@
+
+
+.btn-bd-download {
+  font-weight: 500 !important;
+  color: #ffe484 !important;
+  border-color: #ffe484 !important;
+}
+
+body {
+  background-color: aquamarine !important;
+}
+.h {
+  margin-right: 0 !important;
+  padding-right: 0 !important;
+}
+.special {
+  padding-left: 880px !important;
+}
+nav {
+  height: 50px;
+  
+}
+.navbar{
+
+    background-color: #212529 !important;
+
+}
+@media screen and (max-width: 1900px) and (min-width: 600px) {
+  .collapse ul,
+  .btn {
+    display: none;
+  }
+  .collapse .btn-bd-download {
+    display: none;
+  }
+}
+.navbar-toggler{
+
+
+
+}
+.navbar-collapse{
+
+    background-color: #212529;
+    color: :blanchedalmond;
+
+}

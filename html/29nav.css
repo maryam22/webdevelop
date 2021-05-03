@@ -1,0 +1,86 @@
+@media (min-width: 500px) and (max-width: 800px) {
+  .dropdown {
+    display: none;
+  }
+  .end {
+    display: none !important;
+  }
+
+  .sign {
+    visibility: visible;
+  }
+  .hidden{
+
+    display: none !important;
+
+  }
+ 
+}
+
+@media (min-width: 700px) and (max-width: 1950px) {
+  .navbar-nav-scroll li {
+    border-left: white 1px solid;
+  }
+  .navbar-nav-scroll li {
+    height: 50px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 6px;
+    margin: 0;
+  }
+  .mod{
+
+    display: none !important;
+
+  }
+}
+
+.navbar {
+  padding: 0 !important;
+  padding-left: 20px !important;
+}
+.nav-link {
+  color: white;
+  
+}
+
+body {
+  /*background-color: rgb(98, 82, 110) !important;*/
+}
+
+.sign {
+  visibility: hidden;
+  background-color: rgb(77, 53, 17);
+}
+.card{
+
+  margin: auto !important;
+}
+.container>h1{
+
+
+  padding-top: 150px !important;
+
+}
+.personalize{
+
+   
+   margin-top: 20px;
+
+
+}
+.hight{
+
+  margin-top: 110px;;
+ 
+}
+.bottom{
+
+  margin-bottom:174px;
+}
+.hi{
+
+margin:0;
+
+
+}

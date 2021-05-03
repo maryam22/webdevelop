@@ -1,0 +1,51 @@
+body{
+
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: burlywood;
+    background-image: url(./img/istockphoto-1057506940-612x612.jpg) ;
+    background-repeat:no-repeat;
+    background-size: 100%;
+  
+}
+ .bar nav ul li a{
+     
+   text-decoration: none;
+   color:black;
+
+ }
+ .bar nav ul{
+
+    list-style: none;
+    text-align: center;
+   
+    
+    
+ }
+ .bar nav ul li{
+
+    display: inline;
+    background-color: rgb(176, 221, 195);
+   margin: .5em;
+ }
+ 
+ .bar nav{
+
+    background-color:rosybrown;
+ }
+.bar{
+background-color: rgb(197, 88, 152);
+
+}
+.mary{ 
+   width: 300px;
+   max-height:400px;
+   background-color: aquamarine;
+   margin: auto;
+   padding: 2em;
+   border: 20px;
+   border-radius: 5px;
+   border-style: solid;
+   border-image: url(img/grapefruit-slice-332-332.jpg) 11 11 round;
+
+
+  }

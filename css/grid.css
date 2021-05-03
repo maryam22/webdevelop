@@ -1,0 +1,46 @@
+
+body{
+    margin:0;
+    padding: 0;
+    
+    }
+#parent{
+
+ background-color:salmon;
+ padding: 1em;
+
+
+}
+#child{
+text-align: center;
+background-color: blue;
+width: 400px;
+height: 100px;
+display: flex;
+position: absolute;
+text-align: center;
+
+
+
+}
+#child1{
+
+    background-color:red;
+    width: 400px;
+    height: 100px;
+    display: flex; 
+    position: absolute;
+    margin-left: 405px;
+  
+    
+    }
+    #child2{
+
+        background-color:rgb(30, 255, 0);
+        width: 400px;
+        height: 100px;   
+        position: absolute;
+        z-index: 1;
+   
+        
+        }

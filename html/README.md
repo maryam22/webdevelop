@@ -15,3 +15,9 @@
 *git add * (or single file which is updated)
 *git commit -m "commit Message"
 *git push -u origin master
+
+
+
+new project
+
+$ git config --get remote.origin.url

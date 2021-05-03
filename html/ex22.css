@@ -1,0 +1,42 @@
+body {
+  background-color: thistle;
+  box-sizing: border-box;
+}
+.row {
+  overflow: hidden;
+}
+.row > div {
+  float: left;
+}
+
+.col-1 {
+  background-image: url(/grapefruit.jpg);
+  padding: 1px solid black;
+  width: 25%;
+  height: 300px;
+}
+.col-2 {
+  background-image: url(/7d744a684fe03ebc7e8de545f97739dd.jpg);
+  padding: 1px solid black;
+  width: 75%;
+  height: 300px;
+  object-fit: cover;
+}
+
+/*iphon*/
+@media (max-width: 640px) {
+  .row > div {
+    float: none;
+  }
+
+  .col-2 {
+    width: auto;
+    height: 300px;
+  }
+  .col-1 {
+
+    width: auto;
+    height: 300px;
+  }
+
+}

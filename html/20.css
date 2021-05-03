@@ -1,0 +1,60 @@
+:root{
+
+
+    --webdevcolor:#000000;
+    --intec:#b2dd3c;
+
+}
+
+
+
+
+
+body{
+
+    /*background: rgb(206,89,55);
+    background: -moz-linear-gradient(left, rgb(206,89,55) 0%, rgb(81,201,65) 50%, rgb(197,146,55) 100%);
+    background: -webkit-linear-gradient(left, rgb(206,89,55) 0%, rgb(81,201,65) 50%, rgb(197,146,55) 100%);
+    background: linear-gradient(to right, rgb(206,89,55) 0%, rgb(81,201,65) 50%, rgb(197,146,55) 100%);*/
+    background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,89,121,1) 64%, rgba(0,212,255,1) 100%);
+
+}
+img{
+
+
+    animation: rotation 5s infinite linear;
+}
+@keyframes rotation {
+    
+    from {
+
+    transform: rotate(359deg);
+
+    }
+   to{
+
+    transform: rotate(0deg);
+   }
+}
+div>h2{
+
+    /*text-shadow: 6px 11px 10px rgb(197, 18, 18);*/
+    color: var(--webdevcolor);
+    /*background: #232323;*/
+    text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #49ff18, 0 0 30px #49FF18, 0 0 40px #49FF18, 0 0 55px #49FF18, 0 0 75px #49ff18;
+}
+#rainbow{
+
+    -webkit-box-shadow: 5px 5px 0px 0px #289FED, 10px 10px 0px 0px #5FB8FF, 15px 15px 0px 0px #A1D8FF, 20px 20px 0px 0px #CAE6FF, 25px 25px 0px 0px #E1EEFF, 5px 5px 15px 5px rgba(0,0,0,0); 
+    box-shadow: 5px 5px 0px 0px #289FED, 10px 10px 0px 0px #5FB8FF, 15px 15px 0px 0px #A1D8FF, 20px 20px 0px 0px #CAE6FF, 25px 25px 0px 0px #E1EEFF, 5px 5px 15px 5px rgba(0,0,0,0);
+    padding: 10px;
+    width: 20%;
+    margin-top: 5em;
+    -moz-transform: skew(-25deg, 0deg);
+-webkit-transform: skew(-25deg, 0deg);
+-o-transform: skew(-25deg, 0deg);
+-ms-transform: skew(-25deg, 0deg);
+transform: skew(-25deg, 0deg);
+    
+}
