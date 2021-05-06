@@ -7,9 +7,6 @@ time = (hour * 3600 + minute * 60 + second) / 3600
 
 */ 
 
-
-
-
 function bruto(hour,  minute,  second){
 
   return  (hour*3600+minute*60+second)/3600
@@ -18,9 +15,8 @@ function bruto(hour,  minute,  second){
 
 let thing = bruto(3,20,20);
 
-
-
 console.log("Bruto"+thing);
+
 
 let myObject = {
 
@@ -29,8 +25,16 @@ let myObject = {
   born :"Teheran",
   YearsIn : "10",
   study :"IT",
-  LiveIn :"Brussels"
+  LiveIn :"Brussels",
+  birthdayENMonth: {
+     day:21,
+     month:09
+  }
 
 }
 
-console.log("I am ",myObject.name,myObject.Family,".born in",myObject.born,"I have lived in",myObject.LiveIn,"for",myObject.YearsIn,".I studied",myObject.study);
+console.log("I am ",myObject.name,myObject.Family,".born in",
+myObject.born,"I have lived in",myObject.LiveIn,"for",myObject.YearsIn,".I studied",
+myObject.study,"birthday datum",myObject.birthdayENMonth.day,myObject.birthdayENMonth.month);
+
+
