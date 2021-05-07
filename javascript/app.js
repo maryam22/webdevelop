@@ -20,6 +20,8 @@ console.log("Bruto"+thing);
 console.log("I am ",myObject.name,myObject.Family,".born in",
 myObject.born,"I have lived in",myObject.LiveIn,"for",myObject.YearsIn,".I studied",
 myObject.study,"birthday datum",myObject.birthdayENMonth.day,"/",myObject.birthdayENMonth.month);*/
+
+
 //pass out side
 
 
@@ -65,4 +67,24 @@ let person1 = {
 
 
 }
-person1.printInfo();
+//////print in html
+
+let person2 = {
+  name :"maryam",
+  Family : "Barzeh",
+  born :"Teheran",
+  YearsIn : "10",
+  
+  printInfo:function(){
+
+  console.log("hello")
+  return `I am ${person2.name} ${person2.Family}.born in ${person2.born}. I have lived in ${person2.LiveIn} for ${person2.YearsIn} year.`
+
+  }
+
+
+}
+var x = person2.printInfo();
+
+
+document.getElementById("demo").innerHTML = x;
