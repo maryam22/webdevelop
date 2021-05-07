@@ -59,7 +59,7 @@ let person1 = {
   printInfo:function(){
 
   console.log("hello")
-  console.log(`I am ${person1.name} ${person1.Family}.born in ${person1.born}. I have lived in ${person1.LiveIn} for ${person1.YearsIn}.`)
+  console.log(`I am ${person1.name} ${person1.Family}.born in ${person1.born}. I have lived in ${person1.LiveIn} for ${person1.YearsIn} year.`)
 
   }
 
