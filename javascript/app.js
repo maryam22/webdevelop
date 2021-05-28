@@ -78,13 +78,14 @@ let person2 = {
   printInfo:function(){
 
   console.log("hello")
-  return `I am ${person2.name} ${person2.Family}.born in ${person2.born}. I have lived in ${person2.LiveIn} for ${person2.YearsIn} year.`
+  return `I am ${person2.name} ${person2.Family}.  rn}. I have lived in ${person2.LiveIn} for ${person2.YearsIn} year.`
 
   }
 
 
 }
+
 var x = person2.printInfo();
 
 
-document.getElementById("demo").innerHTML = x;
+//document.getElementById("demo").innerHTML = x;
