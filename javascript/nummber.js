@@ -36,5 +36,28 @@ console.log("output4")
         }    
  
 console.log("output5")
+for ( n of numbers.reverse()) {
+    console.log(n);
+}
 
-console.log(numbers.reverse());
+
+
+const name = "mary"
+    console.log(letter);
+    
+}
+
+
+student = [
+    { username : "Mary ",
+      scours:[]},
+    {username:"marmar",
+     scours:[]}
+    ]
+
+for(let i =0; i<students.length;i++){
+
+   console.log(students[i]);
+   students[i].scours.push(i);
+
+}
