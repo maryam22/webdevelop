@@ -23,6 +23,9 @@
 
  .hidden { display: none !important; }
  .shown { display: inline !important;}
+ .add{width: 200px;
+      height: 50 px;
+    background-color: aquamarine;}
 
 .tui-calendar th, .tui-calendar td {
     height: 39px;
@@ -57,4 +60,8 @@
 
 .drp-buttons {
     display: none !important
+}
+
+.myClass{
+
 }
