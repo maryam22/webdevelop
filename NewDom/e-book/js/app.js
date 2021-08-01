@@ -34,7 +34,7 @@ function RemoveItems(e) {
 
 btnForm.addEventListener('click', addElement)
 
-
+    let i=1;
     function addElement(e){
     e.preventDefault();
     // make td,tr th
@@ -68,11 +68,11 @@ btnForm.addEventListener('click', addElement)
 
     //appanded text
     //let text = document.createTextNode(bookName.value)
-    var t=document.createTextNode("1")
+    var t=document.createTextNode(i++)
     th.appendChild(t)
     td1.appendChild(document.createTextNode(bookName.value))
     td2.appendChild(document.createTextNode(bookAuthor.value))
-    td3.appendChild(document.createTextNode(chooseOption(Number(bookCategory.value))))
+    td3.appendChild(document.createTextNode(bookCategory.value))
     td4.appendChild(document.createTextNode(bookDate.value))
     td5.appendChild(document.createTextNode(bookprice.value))
     //print e simbole after
@@ -83,38 +83,4 @@ btnForm.addEventListener('click', addElement)
     console.log(tr)
 }
 
- //choose categoty
-
- function chooseOption(number){
-  switch(number){
-  case 1:
-    return "Philoshopy"
-  
-  case 2:
-    return "History"
-  
-  case 3:
-    return "Psychology"
-  
-  case 4:
-    return "Fantasy"
-  
-  case 5: 
-  return "Sci-Fi"
-  
-  case 6:
-    return "Mystery"
-  
-  case 7: 
-  return "Thriller"
-  
-  case 8:
-    return "Romance"
-  
-  case 9:
-    return "Westerns"
-  
-
-  }
-  return "failed"
-}
+ 
