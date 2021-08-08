@@ -73,7 +73,7 @@ _editIcon.addEventListener('click', (e) => {
         cityName.style.display = 'inline'; // visible
         searchBody.removeChild(searchBody.children[0])
         weather.getCurrentWeather();
-        weather.getHourlyWeatherData().then(res => { b
+        weather.getHourlyWeatherData().then(res => {
             
 
             while (hourlyWeather.hasChildNodes()) {
