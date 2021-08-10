@@ -41,32 +41,12 @@ function setAttributes(el, attrs) {
 
 
 
-/*              
-    
-
-                        
-
-
-
-
-
-                        weather.getHourlyWeatherData().then(res => { b
-            
-
-            while (hourlyWeather.hasChildNodes()) {
-                hourlyWeather.removeChild(hourlyWeather.firstChild);
-            }
-
-                res.list.forEach(hour => {
-  */
-
-
 btnDefault.addEventListener('click', function (e) {
     e.preventDefault();
 
     console.log("helloo")
     let dic = new DictionaryApplication(option.value, search.value)
-    //let data = dic.getLangugeAndWord();
+    
 
     dic.getLangugeAndWord().then(result => {
 
@@ -134,37 +114,9 @@ btnDefault.addEventListener('click', function (e) {
 
             });
 
-            // hr.innerText = "Example;"
-            // div3.appendChild(br1)
-            // div3.innerText = `${data.meanings[1].definitions[0].example}`
-
-            //console.log(div3)
-
         });
 
     });
 
 })
 
-
-// let h3 = g("h3")
-// setAttributes(h3, { "class": "word-text" })
-// h3.innerText = `${data.word}`
-// uiBox.appendChild(h3)
-
-/*<h3 class="word-text">${obj.word}</h3>
-<span class="pronunciation-text d-block mb-1" style="color: #808080;">${obj.phonetics[0].text}</span>
-
-<a id="play-pause-button" class="fa fa-play"></a>
-<div id="definitions-container">
-    <div class="row" style="border-top: solid 1px #e6e6e6; padding: 10px 0">
-        <div class="col-sm-9 my-auto definition"><i>noun</i><br>
-        ${obj.meanings[1].definitions[0].definition}
-        <hr>
-        Example;<br>
-        ${obj.meanings[1].definitions[0].example}
-        <br>
-        </div>
-
-    </div>
-</div>*/
