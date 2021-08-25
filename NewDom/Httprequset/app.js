@@ -49,7 +49,8 @@ post.addEventListener('click', e => {
 
 delet.addEventListener('click',e=>{
   e.preventDefault();
-  fetch(`${api_url}/4`,{method:'DELETE'})
+  fetch(`${api_url}/4`,{
+      method:'DELETE'})
   .then(res=>{console.log(res)})
 
 })

@@ -18,11 +18,20 @@ class DictionaryApplication {
     constructor(lang, word) {
         //this.langUrl=`https://api.dictionaryapi.dev/api/v2/entries/${lang}/hello`
         this.wordUrl = `https://api.dictionaryapi.dev/api/v2/entries/${lang}/${word}`
+        this.weatherUrl = `http://localhost:30038/api/weatherforecast`
 
     }
 
     async getLangugeAndWord() {
         let res = await fetch(this.wordUrl)
+        let data = res.json();
+        return data
+
+
+    }
+
+    async getWeather() {
+        let res = await fetch(this.weatherUrl)
         let data = res.json();
         return data
 
@@ -44,17 +53,32 @@ function setAttributes(el, attrs) {
 btnDefault.addEventListener('click', function (e) {
     e.preventDefault();
 
-    console.log("helloo")
+    let weather2 = document.querySelector("#weather2")
+
     let dic = new DictionaryApplication(option.value, search.value)
     
+    dic.getWeather().then(result => {
+        weather2
+
+        result.forEach(data => {
+            let g = (c) => document.createElement(c)
+            let h3 = g("h3")
+            let date = new Date(data.date);
+            setAttributes(h3, { "class": "word-text" })
+            h3.innerText = `${date.toLocaleDateString("en-gb")} - ${data.summary} (${data.temperatureC}C)`
+            weather2.appendChild(h3)
+
+
+        });
+    });
 
     dic.getLangugeAndWord().then(result => {
 
         while (uiBox.hasChildNodes()) {
             uiBox.removeChild(uiBox.firstChild);
         }
-
-
+     
+         
         result.forEach(data => {
             let g = (c) => document.createElement(c)
             let h3 = g("h3")
