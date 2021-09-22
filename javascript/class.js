@@ -1,41 +1,23 @@
 "use strict"
+let numbers =[1,2,3,4,5,6,7,8,9,10]
 
-class person{
 
-   constructor(id,firstName,lastName){
-   this.id = id;
-   this.firstName = firstName;
-   this.lastName = lastName;
-   
-   object.defineProperties(this, {
-     "Id": { 
-        get:function() {return id }
-     },  
-    "FirstName": {
-        get: function () { return _firstName },
-        set: function (value) { _firstName = value }
-    },
-    "LastName": {
-        get: function () { return _lastName },
-        set: function (value) { _lastName = value }
-    }
+function avarage(num){
+let i =0
+let sum=0
+
+for(i=0;i<num.length;i++){
     
-});
+  sum += num[i]
+  
+  
+}
+console.log(i)
+let result = sum/num.length
+console.log(result.toFixed(2))
+return result
 
-this.getFullName = function () {
-        return this.FirstName + " " + this.LastName;
 }
 
-}}
-
-class manager extends person{
-constructor(id, firstName,lastName,department) {
-    super(id,firstName,lastName);
-    this.department = department;
-  }
-  show() {
-    return this.getFullName() + ', He works in ' +this.department ;
-  }
-
-}
-var person1 = new person( 1,mary,BarP);
+avarage(numbers);
+console.log(avarage(numbers).toFixed(2))
