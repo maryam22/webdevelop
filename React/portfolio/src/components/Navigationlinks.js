@@ -6,7 +6,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 function Navigationlinks() {
     return (
         <Navbar bg="light" expand="lg">
-        <Container>   
+        <Container fluid={true}>   
         <Navbar.Brand href="#">Portfolio v1.0</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
@@ -17,12 +17,9 @@ function Navigationlinks() {
           >
             <Nav.Link ><Link to="/">Home</Link></Nav.Link>
             <Nav.Link ><Link to="/projects">Projects</Link></Nav.Link>
-           
-            <Nav.Link >
-              Link
-            </Nav.Link>
+            <Nav.Link ><Link to="/about">About</Link></Nav.Link>
+            <Nav.Link ><Link to="/contact">Contact</Link></Nav.Link>
           </Nav>
-     
      
         </Navbar.Collapse>
         </Container> 

@@ -4,3 +4,16 @@ body,html{
  padding:0 !important;
 
 }
+.navbar-nav a{
+ 
+    
+color:rgba(2, 2, 2, 0.5) !important;
+
+}
+
+.navbar-nav a:hover{
+
+text-decoration:none  !important;
+color:rgba(145, 55, 55, 0.678) !important;
+
+}

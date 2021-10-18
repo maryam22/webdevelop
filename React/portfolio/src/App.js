@@ -1,9 +1,7 @@
 import React from 'react'
 import {
   BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
+  Switch
 } from "react-router-dom";
 import Navigationlinks from './components/Navigationlinks';
 import About from './pages/About';
@@ -12,6 +10,9 @@ import Home from './pages/Home';
 import Notfound from './pages/Notfound';
 import Projects from './pages/Projects';
 import 'bootstrap/dist/css/bootstrap.css';
+import Footer from './components/Footer';
+
+
 
 function App() {
   return (
@@ -37,6 +38,7 @@ function App() {
            <Notfound/>
          </Router>
      </Switch>
+     <Footer/>
     </Router>
   )
 }
