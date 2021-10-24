@@ -1,15 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import ReactDOM from 'react-dom';
 import CarouselPanl from "./CarouselPanl"
-import $ from 'jquery';
+import CarouselPanlVideo from "./CarouselPanlVideo"
 import Popper from 'popper.js';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
+import { Player } from 'video-react';
+const { getJsonList, getJsonListFromUrlAsync } = require('iptv-list-to-json')
 
 //function Carousel() {
 
 
-    const Carousel = (props) => {
+    const CarouselVideo = (props) => {
         // 
+
         
         const [currentSlide, setCurrentSlide] = useState(0);
         const [news, setNews] = useState([]);
@@ -30,28 +33,36 @@ import 'bootstrap/dist/js/bootstrap.bundle.min';
                 });
             }, 6000);
             return () => {
+
                 clearInterval(intervalId);
             };
         }, []);
+
         useEffect(() => {
 
-                fetch('https://newsapi.org/v2/everything?domains=wsj.com&apiKey=d3ca5fab3c99469ba519b17354f7978e')
-                .then(res => res.json())
-                .then(data => {
-                    console.log(data)
-                    setNews(data.articles)
-                })
+            getJsonListFromUrlAsync('https://iptv-org.github.io/iptv/categories/sports.m3u', function (error,list_in_json) {
+            if(error) return console.log('Error: '+error.code); // If there is an error return a warning
+            console.log(list_in_json); // If there is no an error show the list
+            setNews(list_in_json)
+        })
+            
         }, [])
+     
+        
+            
+               
+     
+        
         
         return (
             <React.Fragment>
                 <h1>
                     React Slider{" "}
                     <small>
-                        <em>(we have {news ? news.length : 0} slides)</em>
+                        <em>(we have {  news? news.length : 0} slides)</em>
                     </small>
                 </h1>
-                <CarouselPanl
+                <CarouselPanlVideo
                     article={news[currentSlide]}
                     slideNext={slideNext}
                     slidePrev={slidePrev}
@@ -62,21 +73,8 @@ import 'bootstrap/dist/js/bootstrap.bundle.min';
 
 
 
-    // return (
-        
-    //     <div className="carousel">
-    //                             <small>
-    //                     <em>(we have {props.length} slides)</em>
-    //                 </small>
-    //                 <CarouselPanl
-    //                 image={Slides[currentSlide]}
-    //                 slideNext={slideNext}
-    //                 slidePrev={slidePrev}
-    //             />
-    //     </div>
-    // )
-
-//}
+ 
+    
 
 
-export default Carousel
+export default CarouselVideo 

@@ -1,13 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import defaultImage from "./images/absolutvision.jpg"
+import ReactHlsPlayer from 'react-hls-player';
 
 
-
-
-
-
-const CarouselPanl = (props) => {
+const CarouselPanlVideo = (props) => {
     const btnContainer = {
       display: "inline-block",
       float: "right"
@@ -25,13 +22,23 @@ const CarouselPanl = (props) => {
     };
     console.log(props)
     if (!props.article) return null
+ 
+    
     return (
       <React.Fragment>
-        <img src={props.article.urlToImage ? props.article.urlToImage : defaultImage} alt="Sliderr_image" />
-        <h1>{props.article.title}</h1>
+        <img src={props.article.img ? props.article.img : defaultImage} alt="Sliderr_image" />
+        <h1>{props.article.channel_name}</h1>
+        <h2>{props.article.group}</h2>
+        <div>
+        <ReactHlsPlayer
+    src="https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8"
+    hlsConfig={{
+      maxLoadingDelay: 4,
+      minAutoBitrate: 0,
+      lowLatencyMode: true,
+    }}
+  />,
 
-        <h1>
-          
           <span style={btnContainer}>
             <button style={btn} onClick={props.slidePrev}>
               {"<"} Prevs
@@ -41,12 +48,13 @@ const CarouselPanl = (props) => {
               {">"} Next
             </button>
           </span>
-        </h1>
+        </div>
       </React.Fragment>
     );
+ 
   };
-
+  
   
  // ReactDOM.render(<App />, document.querySelector("#root"));
 
-  export default CarouselPanl
+  export default CarouselPanlVideo
