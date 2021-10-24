@@ -6,10 +6,9 @@ function App() {
   return (
     <div className="App">
       
-      
-      
+      <Carousel/>
       <CarouselVideo/>
-      
+        
     </div>
   );
 }

@@ -23,12 +23,16 @@ const CarouselPanl = (props) => {
       
 
     };
+    const img =  {
+      width:"900px"
+    };
     console.log(props)
     if (!props.article) return null
     return (
       <React.Fragment>
-        <img src={props.article.urlToImage ? props.article.urlToImage : defaultImage} alt="Sliderr_image" />
-        <h1>{props.article.title}</h1>
+        <img src={props.article.urlToImage ? props.article.urlToImage : defaultImage } style={ img } alt="Sliderr_image" />
+        <h3>{props.article.title}<a href={props.article.url} >Read more</a></h3>
+        
 
         <h1>
           

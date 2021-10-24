@@ -46,9 +46,9 @@ import 'bootstrap/dist/js/bootstrap.bundle.min';
         return (
             <React.Fragment>
                 <h1>
-                    React Slider{" "}
+                    {/* React Slider{" "} */}
                     <small>
-                        <em>(we have {news ? news.length : 0} slides)</em>
+                        <em>we have {news ? news.length : 0} news</em>
                     </small>
                 </h1>
                 <CarouselPanl

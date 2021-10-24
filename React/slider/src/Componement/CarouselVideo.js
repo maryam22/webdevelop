@@ -26,17 +26,17 @@ const { getJsonList, getJsonListFromUrlAsync } = require('iptv-list-to-json')
                 return prev === 0 ? props.length - 1 : currentSlide - 1;
             });
         };
-        React.useEffect(() => {
-            const intervalId = setInterval(() => {
-                setCurrentSlide((prev) => {
-                    return prev + 1 === props.length ? 0 : prev + 1;
-                });
-            }, 6000);
-            return () => {
+        // React.useEffect(() => {
+        //     const intervalId = setInterval(() => {
+        //         setCurrentSlide((prev) => {
+        //             return prev + 1 === props.length ? 0 : prev + 1;
+        //         });
+        //     }, 6000);
+        //     return () => {
 
-                clearInterval(intervalId);
-            };
-        }, []);
+        //         clearInterval(intervalId);
+        //     };
+        // }, []);
 
         useEffect(() => {
 
@@ -57,9 +57,9 @@ const { getJsonList, getJsonListFromUrlAsync } = require('iptv-list-to-json')
         return (
             <React.Fragment>
                 <h1>
-                    React Slider{" "}
+                    {/* React Slider{" "} */}
                     <small>
-                        <em>(we have {  news? news.length : 0} slides)</em>
+                        <em>we have {  news? news.length : 0} chanals</em>
                     </small>
                 </h1>
                 <CarouselPanlVideo

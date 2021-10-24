@@ -20,6 +20,11 @@ const CarouselPanlVideo = (props) => {
       
 
     };
+    const videoContainer = {
+      display: "flex",
+      height: "720px !important",
+      width: "1024px !important"
+    };
     console.log(props)
     if (!props.article) return null
  
@@ -29,16 +34,21 @@ const CarouselPanlVideo = (props) => {
         <img src={props.article.img ? props.article.img : defaultImage} alt="Sliderr_image" />
         <h1>{props.article.channel_name}</h1>
         <h2>{props.article.group}</h2>
-        <div>
+        <div style={videoContainer}>
         <ReactHlsPlayer
-    src="https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8"
+    src={props.article.video_url}
     hlsConfig={{
       maxLoadingDelay: 4,
       minAutoBitrate: 0,
       lowLatencyMode: true,
+      controls: true,
+      autoPlay: true,
+      height: 720,
+      width: 1024
     }}
-  />,
-
+  />
+  </div>
+<div>
           <span style={btnContainer}>
             <button style={btn} onClick={props.slidePrev}>
               {"<"} Prevs
