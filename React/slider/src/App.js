@@ -7,7 +7,7 @@ function App() {
     <div className="App">
       
       <Carousel/>
-      <CarouselVideo/>
+      {/* <CarouselVideo/> */}
         
     </div>
   );

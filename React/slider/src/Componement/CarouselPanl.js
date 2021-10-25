@@ -8,6 +8,9 @@ import defaultImage from "./images/absolutvision.jpg"
 
 
 const CarouselPanl = (props) => {
+  
+
+
     const btnContainer = {
       display: "inline-block",
       float: "right"

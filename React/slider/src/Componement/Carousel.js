@@ -1,38 +1,43 @@
 import React, { useEffect, useState } from 'react';
-import ReactDOM from 'react-dom';
 import CarouselPanl from "./CarouselPanl"
-import $ from 'jquery';
-import Popper from 'popper.js';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 
 //function Carousel() {
 
 
-    const Carousel = (props) => {
+    const Carousel = () => {
         // 
         
         const [currentSlide, setCurrentSlide] = useState(0);
         const [news, setNews] = useState([]);
-        const slideNext = (e) => {
-            setCurrentSlide((prev) => {
-                return prev + 1 === props.length ? 0 : currentSlide + 1;
-            });
-        };
-        const slidePrev = (e) => {
-            setCurrentSlide((prev) => {
-                return prev === 0 ? props.length - 1 : currentSlide - 1;
-            });
-        };
-        React.useEffect(() => {
-            const intervalId = setInterval(() => {
-                setCurrentSlide((prev) => {
-                    return prev + 1 === props.length ? 0 : prev + 1;
-                });
-            }, 6000);
-            return () => {
-                clearInterval(intervalId);
-            };
-        }, []);
+
+
+        
+  const slideNext = (e) => {
+    setCurrentSlide((prev) => {
+        
+        if (news == null){
+
+            return currentSlide+1
+        }
+        return prev + 1 === news.length ? 0 : currentSlide + 1;
+    });
+};
+const slidePrev = (e) => {
+    setCurrentSlide((prev) => {
+      
+        if (news == null){
+
+            return currentSlide-1
+        }
+
+        return prev === 0 ? news.length - 1 : currentSlide -1 ;
+    });
+};
+useEffect(() => {
+  
+}, []);
+      
         useEffect(() => {
 
                 fetch('https://newsapi.org/v2/everything?domains=wsj.com&apiKey=d3ca5fab3c99469ba519b17354f7978e')
@@ -41,6 +46,14 @@ import 'bootstrap/dist/js/bootstrap.bundle.min';
                     console.log(data)
                     setNews(data.articles)
                 })
+                // const intervalId = setInterval(() => {
+                //     setCurrentSlide((prev) => {
+                //         return prev + 1 === news[currentSlide].length ? 0 : prev + 1;
+                //     });
+                // }, 6000);
+                // return () => {
+                //     clearInterval(intervalId);
+                // };
         }, [])
         
         return (
@@ -51,7 +64,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min';
                         <em>we have {news ? news.length : 0} news</em>
                     </small>
                 </h1>
-                <CarouselPanl
+                <CarouselPanl 
                     article={news[currentSlide]}
                     slideNext={slideNext}
                     slidePrev={slidePrev}
