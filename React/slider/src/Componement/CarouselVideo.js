@@ -1,42 +1,37 @@
 import React, { useEffect, useState } from 'react';
-import ReactDOM from 'react-dom';
-import CarouselPanl from "./CarouselPanl"
 import CarouselPanlVideo from "./CarouselPanlVideo"
-import Popper from 'popper.js';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
-import { Player } from 'video-react';
 const { getJsonList, getJsonListFromUrlAsync } = require('iptv-list-to-json')
 
-//function Carousel() {
 
 
-    const CarouselVideo = (props) => {
-        // 
 
+    const CarouselVideo = () => {
         
-        const [currentSlide, setCurrentSlide] = useState(0);
-        const [news, setNews] = useState([]);
-        const slideNext = (e) => {
-            setCurrentSlide((prev) => {
-                return prev + 1 === props.length ? 0 : currentSlide + 1;
-            });
-        };
-        const slidePrev = (e) => {
-            setCurrentSlide((prev) => {
-                return prev === 0 ? props.length - 1 : currentSlide - 1;
-            });
-        };
-        // React.useEffect(() => {
-        //     const intervalId = setInterval(() => {
-        //         setCurrentSlide((prev) => {
-        //             return prev + 1 === props.length ? 0 : prev + 1;
-        //         });
-        //     }, 6000);
-        //     return () => {
-
-        //         clearInterval(intervalId);
-        //     };
-        // }, []);
+        
+            const [currentSlide, setCurrentSlide] = useState(0);
+            const [news, setNews] = useState([]);
+    
+      const slideNext = (e) => {
+        setCurrentSlide((prev) => {
+            
+            if (news == null){
+                return currentSlide+1
+            }
+            return prev + 1 === news.length ? 0 : currentSlide + 1;
+        });
+    };
+    const slidePrev = (e) => {
+        setCurrentSlide((prev) => {
+          
+            if (news == null){
+                return currentSlide-1
+            }
+    
+            return prev === 0 ? news.length - 1 : currentSlide -1 ;
+        });
+    };
+    
 
         useEffect(() => {
 
@@ -48,16 +43,12 @@ const { getJsonList, getJsonListFromUrlAsync } = require('iptv-list-to-json')
             
         }, [])
      
-        
-            
-               
-     
-        
+          
         
         return (
             <React.Fragment>
                 <h1>
-                    {/* React Slider{" "} */}
+              
                     <small>
                         <em>we have {  news? news.length : 0} chanals</em>
                     </small>
@@ -72,9 +63,6 @@ const { getJsonList, getJsonListFromUrlAsync } = require('iptv-list-to-json')
     };
 
 
-
- 
-    
 
 
 export default CarouselVideo 

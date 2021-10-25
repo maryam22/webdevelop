@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import defaultImage from "./images/absolutvision.jpg"
 
 
@@ -54,6 +53,5 @@ const CarouselPanl = (props) => {
   };
 
   
- // ReactDOM.render(<App />, document.querySelector("#root"));
-
+ 
   export default CarouselPanl

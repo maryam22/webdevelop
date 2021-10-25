@@ -1,5 +1,4 @@
 import React from 'react';
-import defaultImage from "./images/absolutvision.jpg"
 import ReactHlsPlayer from 'react-hls-player';
 
 

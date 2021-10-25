@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import CarouselPanl from "./CarouselPanl"
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 
-//function Carousel() {
+
 
 
     const Carousel = () => {
@@ -34,9 +34,7 @@ const slidePrev = (e) => {
         return prev === 0 ? news.length - 1 : currentSlide -1 ;
     });
 };
-useEffect(() => {
-  
-}, []);
+
       
         useEffect(() => {
 
@@ -46,20 +44,13 @@ useEffect(() => {
                     console.log(data)
                     setNews(data.articles)
                 })
-                // const intervalId = setInterval(() => {
-                //     setCurrentSlide((prev) => {
-                //         return prev + 1 === news[currentSlide].length ? 0 : prev + 1;
-                //     });
-                // }, 6000);
-                // return () => {
-                //     clearInterval(intervalId);
-                // };
+           
         }, [])
         
         return (
             <React.Fragment>
                 <h1>
-                    {/* React Slider{" "} */}
+                    
                     <small>
                         <em>we have {news ? news.length : 0} news</em>
                     </small>
@@ -74,22 +65,6 @@ useEffect(() => {
     };
 
 
-
-    // return (
-        
-    //     <div className="carousel">
-    //                             <small>
-    //                     <em>(we have {props.length} slides)</em>
-    //                 </small>
-    //                 <CarouselPanl
-    //                 image={Slides[currentSlide]}
-    //                 slideNext={slideNext}
-    //                 slidePrev={slidePrev}
-    //             />
-    //     </div>
-    // )
-
-//}
 
 
 export default Carousel
